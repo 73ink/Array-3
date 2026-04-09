@@ -21,9 +21,16 @@ public class practiceJava4 {
 //        int[] nums = {1, 4, 5, 6, 2};
 //        System.out.println(t20.tripleUp(nums));
         // task-21
-        practiceJava4 t21 = new practiceJava4();
-        int[] nums = {2, 10, 3, 4, 20, 5};
-        int[] result = t21.tenRun(nums);
+//        practiceJava4 t21 = new practiceJava4();
+//        int[] nums = {2, 10, 3, 4, 20, 5};
+//        int[] result = t21.tenRun(nums);
+//        for (int i = 0; i < result.length; i++){
+//            System.out.println(result[i]);
+//        }
+        // task-22
+        practiceJava4 t22 = new practiceJava4();
+        int[] nums = {1, 2, 3};
+        int[] result = t22.notAlone(nums, 2);
         for (int i = 0; i < result.length; i++){
             System.out.println(result[i]);
         }
@@ -103,6 +110,23 @@ public class practiceJava4 {
             }
             else if (found == true){
                 nums[i] = value;
+            }
+        }
+
+        return nums;
+    }
+    public int[] notAlone(int[] nums, int val){
+
+        for (int i = 1; i < nums.length - 1; i++){
+
+            if (nums[i] == val && nums[i - 1] != val && nums[i + 1] != val){
+
+                if (nums[i - 1] > nums[i + 1]){
+                    nums[i] = nums[i - 1];
+                }
+                else{
+                    nums[i] = nums[i + 1];
+                }
             }
         }
 
