@@ -42,9 +42,13 @@ public class practiceJava4 {
 //            System.out.println(result[i]);
 //        }
         // task-24
-        practiceJava4 t24 = new practiceJava4();
-        int[] nums = {1, 2, 3, 4, 100};
-        System.out.println(t24.centeredAverage(nums));
+//        practiceJava4 t24 = new practiceJava4();
+//        int[] nums = {1, 2, 3, 4, 100};
+//        System.out.println(t24.centeredAverage(nums));
+        // task-25
+        practiceJava4 t25 = new practiceJava4();
+        int [] nums = {1, 2, 2};
+        System.out.println(t25.has22(nums));
 
 
     }
@@ -186,6 +190,17 @@ public class practiceJava4 {
         }
 
         return (sum - min - max) / (nums.length - 2);
+    }
+    public boolean has22(int[] nums){
+
+        for (int i = 0; i < nums.length - 1; i++){
+
+            if (nums[i] == 2 && nums[i + 1] == 2){
+                return true;
+            }
+        }
+
+        return false;
     }
 
 
