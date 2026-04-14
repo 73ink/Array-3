@@ -49,6 +49,7 @@ public class practiceJava4 {
         practiceJava4 t25 = new practiceJava4();
         int [] nums = {1, 2, 2};
         System.out.println(t25.has22(nums));
+        // tsak-26
 
 
     }
@@ -202,6 +203,7 @@ public class practiceJava4 {
 
         return false;
     }
+
 
 
 }
