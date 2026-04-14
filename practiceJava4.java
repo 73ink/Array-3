@@ -46,10 +46,13 @@ public class practiceJava4 {
 //        int[] nums = {1, 2, 3, 4, 100};
 //        System.out.println(t24.centeredAverage(nums));
         // task-25
-        practiceJava4 t25 = new practiceJava4();
-        int [] nums = {1, 2, 2};
-        System.out.println(t25.has22(nums));
-        // tsak-26
+//        practiceJava4 t25 = new practiceJava4();
+//        int [] nums = {1, 2, 2};
+//        System.out.println(t25.has22(nums));
+        // task-26
+        practiceJava4 t26 = new practiceJava4();
+        int [] nums = {1, 4, 1};
+        System.out.println(t26.more14(nums));
 
 
     }
@@ -202,6 +205,28 @@ public class practiceJava4 {
         }
 
         return false;
+    }
+    public boolean more14(int[] nums){
+
+        int count1 = 0;
+        int count4 = 0;
+
+        for (int i = 0; i < nums.length; i++){
+
+            if (nums[i] == 1){
+                count1++;
+            }
+            else if (nums[i] == 4){
+                count4++;
+            }
+        }
+
+        if (count1 > count4){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
 
